@@ -6,8 +6,11 @@ const ContactForm = ({ onSubmit }) => {
 
   const handleChange = e => {
     const { name, value } = e.target;
-    if (name === 'name') setName(value);
-    if (name === 'number') setNumber(value);
+    if (name === 'name') {
+      setName(value);
+    } else if (name === 'number') {
+      setNumber(value);
+    }
   };
 
   const handleSubmit = e => {
@@ -20,7 +23,7 @@ const ContactForm = ({ onSubmit }) => {
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Name
+        Name 
         <input
           type="text"
           name="name"
@@ -32,7 +35,7 @@ const ContactForm = ({ onSubmit }) => {
         />
       </label>
       <label>
-        Number
+        Number 
         <input
           type="tel"
           name="number"
